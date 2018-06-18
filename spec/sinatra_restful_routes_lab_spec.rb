@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Recipe App" do
+puts describe "Recipe App" do
   let(:recipe_name) { "Bomb.com Mac and Cheese" }
   let(:recipe_ingredients) { "milk, butter, cheese, elbow pasta" }
   let(:recipe_cook_time) { "20 minutes" }
@@ -10,7 +10,7 @@ describe "Recipe App" do
     @recipe2 = Recipe.create(:name => "waldorf salad", :ingredients => "apples, cabbage, oil, vinegar", :cook_time => "0")
   end
 
-  describe "Index page '/recipes'" do
+  puts describe "Index page '/recipes'" do
     before do
       get "/recipes"
     end
@@ -31,7 +31,7 @@ describe "Recipe App" do
   end
 
     
-  describe "show page '/recipes/:id'" do
+  puts describe "show page '/recipes/:id'" do
     before do
       get "/recipes/#{@recipe1.id}"
     end
